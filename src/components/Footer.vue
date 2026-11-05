@@ -8,9 +8,9 @@
 </template>
 
 <script>
-export default{
-    name: "footer"
-}
+export default {
+  name: 'FooterComponent',
+};
 </script>
 
 <style scoped>
@@ -20,5 +20,6 @@ export default{
   padding: 15px;
   border-radius: 12px;
   margin-top: 20px;
+  align-self: stretch;
 }
 </style>
