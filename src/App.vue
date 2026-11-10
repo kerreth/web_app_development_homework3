@@ -1,8 +1,5 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/signup">SignUp</router-link>
-  </nav>
+  <HeaderComponent/>
   <main>
     <router-view/>
   </main>
@@ -11,10 +8,11 @@
 
 <script>
 import FooterComponent from '@/components/Footer.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
 
 export default {
   name: 'App',
-  components: { FooterComponent },
+  components: { HeaderComponent, FooterComponent },
 };
 </script>
 
@@ -23,7 +21,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   display: flex;
   flex-direction: column;
