@@ -21,5 +21,6 @@ export default {
   border-radius: 12px;
   margin-top: 20px;
   align-self: stretch;
+  height: 13%;
 }
 </style>

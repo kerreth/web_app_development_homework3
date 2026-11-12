@@ -16,15 +16,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 header {
-  background-color: #899b7a;
+  background-color: #b5d9e7;
   border-radius: 12px;
-  height: 60px;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 20px;
   font-weight: bold;
-  margin-top: 10px;
+  justify-content: center;
   /*Header stays above every element*/
 }
 
@@ -37,13 +37,13 @@ nav a {
 
 nav a:hover {
   /*Pseudo class*/
-  background-color: #aab89a;
+  background-color: #87a3ad;
   color: #000000;
   border-radius: 6px;
 }
 
 nav a.router-link-exact-active {
-  color:darkgreen;
+  color:#0099d1;
 }
 
 </style>

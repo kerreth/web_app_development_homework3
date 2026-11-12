@@ -40,6 +40,8 @@ form {
     box-sizing: border-box;
     padding: 25px;
     box-shadow: 0 6px 18px rgba(60, 75, 50, 0.18);
+    margin: auto;
+    max-width: 100%;
 }
 
 .login-box > p {

@@ -18,7 +18,9 @@
       <p>{{ content.post_text }}</p>
     </article>
     <footer class="post-footer">
-      <img src="@/assets/likebutton.png" alt="Like" />
+      <button class="likebutton">
+        <img src="@/assets/likebutton.png" alt="Like" />
+      </button>
     </footer>
   </article>
 </template>
@@ -57,7 +59,7 @@ p {
   color: #34495e;
 }
 header {
-  background-color: #899b7a;
+  background-color: #b5d9e7;
   border-radius: 12px;
   height: 60px;
   display: flex;
@@ -81,13 +83,13 @@ header {
   /* So the scrollbar isn't too close to the posts*/
 }
 .post {
-  background-color: #a9b89d;
+  background-color: #c3e9f8;
   border-radius: 12px;
   padding: 15px;
   flex-direction: column;
 }
 .post-header {
-  background-color: #a9b89d;
+  background-color: #c3e9f8;
 }
 
 .post-avatar {
@@ -109,32 +111,30 @@ header {
   border-radius: 12px;
 }
 
-.post-footer img {
+
+.likebutton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.likebutton img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  opacity: 1;
+  transition: 0.2s ease 1s;
+}
+
+.likebutton:active img{
+  opacity: 0.4;
+  transition: none;
 }
 
 article > p {
   font-size: 1.5em;
   margin: 2px 0;
 }
-/* Posts scrollbar */
-.postsArea::-webkit-scrollbar {
-  width: 10px;
-}
 
-.postsArea::-webkit-scrollbar-track {
-  background-color: #edf0e9;
-  border-radius: 10px;
-}
-
-.postsArea::-webkit-scrollbar-thumb {
-  background-color: #899b7a;
-  border-radius: 10px;
-}
-
-.postsArea::-webkit-scrollbar-thumb:hover {
-  background-color: #536747;
-}
 </style>
