@@ -18,9 +18,10 @@
       <p>{{ content.post_text }}</p>
     </article>
     <footer class="post-footer">
-      <button class="likebutton">
+      <button class="likebutton" @click="addLike()">
         <img src="@/assets/likebutton.png" alt="Like" />
       </button>
+      <p><span>{{ content.likes }}</span> Likes</p>
     </footer>
   </article>
 </template>
@@ -42,6 +43,10 @@ export default {
   methods: {
     getImageUrl(name) {
       return require(`@/assets/${name}`);
+    },
+
+    addLike() {
+      this.$store.dispatch("AddLikeAct", this.id)
     },
   },
 };
@@ -135,6 +140,11 @@ header {
 article > p {
   font-size: 1.5em;
   margin: 2px 0;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
 </style>

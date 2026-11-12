@@ -19,7 +19,7 @@ export default {
   text-align: center;
   padding: 15px;
   border-radius: 12px;
-  margin-top: 20px;
+  margin-top: 10px;
   align-self: stretch;
   height: 13%;
 }

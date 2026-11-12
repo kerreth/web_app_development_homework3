@@ -13,6 +13,9 @@
     </aside>
 
   </section>
+  <section class="resetButtonSection">
+    <button class="resetButton" @click="resetLikes()">Reset Likes</button>
+  </section>
 </template>
 <script>
 
@@ -26,6 +29,12 @@ export default {
       return this.$store.state.posts.map(post => post.id);
     },
   },
+
+  methods: {
+      resetLikes() {
+        this.$store.dispatch("ResetLikesAct");
+      }
+  }
 };
 </script>
 
@@ -51,6 +60,21 @@ export default {
       flex-direction: column;
       gap: 20px; /*Gap between posts*/
       padding-right: 8px; /* So the scrollbar isn't too close to the posts*/
+    }
+
+    .resetButton {
+      background-color: #265ed8;
+      color: white;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .resetButtonSection {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
     }
     /* Posts scrollbar */
     .postsArea::-webkit-scrollbar {
