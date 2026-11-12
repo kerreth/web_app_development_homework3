@@ -1,36 +1,46 @@
 <template>
-  <HeaderComponent/>
+  <HeaderComponent />
   <main>
-    <router-view/>
+    <router-view />
   </main>
-  <FooterComponent/>
+  <FooterComponent />
 </template>
 
 <script>
-import FooterComponent from '@/components/Footer.vue';
-import HeaderComponent from '@/components/HeaderComponent.vue';
+import FooterComponent from "@/components/Footer.vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: { HeaderComponent, FooterComponent },
 };
 </script>
 
 <style>
+* {
+  font-family: Calibri, sans-serif;
+}
+html,
+body {
+  height: 100%; /*Body takes up the whole height of the viewport*/
+}
+p {
+  color: #34495e;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  /* color: #2c3e50;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   min-height: 100vh;
   gap: 1em;
-  align-items: center;
+  align-items: center; */
 }
 
-nav {
+/*nav {
   padding: 30px;
 }
 
@@ -39,13 +49,9 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
 main {
   flex: 1;
-}
+}*/
 
 body {
   margin: 0;

@@ -1,39 +1,40 @@
 <template>
-  <section class="postsArea">
-    <article class="post" v-for="post in posts" :key="post.id">
-      <header class="post-header">
-        <img
-          :src="getImageUrl(post.profile_picture)"
-          alt="Profile picture"
-          class="post-avatar"
-        />
-        <span class="post-date">{{ post.creation_time }}</span>
-      </header>
-      <article class="post-body">
-        <img
-          v-if="post.post_attachment"
-          :src="getImageUrl(post.post_attachment)"
-          alt="Post attachment"
-          class="post-image"
-        />
-        <p>{{ post.post_text }}</p>
-      </article>
-      <footer class="post-footer">
-        <img src="@/assets/likebutton.png" alt="Like" />
-      </footer>
+  <article v-if="content" class="post">
+    <header class="post-header">
+      <img
+        :src="getImageUrl(content.profile_picture)"
+        alt="Profile picture"
+        class="post-avatar"
+      />
+      <span class="post-date">{{ content.creation_time }}</span>
+    </header>
+    <article class="post-body">
+      <img
+        v-if="content.post_attachment"
+        :src="getImageUrl(content.post_attachment)"
+        alt="Post attachment"
+        class="post-image"
+      />
+      <p>{{ content.post_text }}</p>
     </article>
-  </section>
+    <footer class="post-footer">
+      <img src="@/assets/likebutton.png" alt="Like" />
+    </footer>
+  </article>
 </template>
 
 <script>
 export default {
-  name: "PostsComponent",
-  data: function () {
-    return {};
-  },
+  name: "PostComponent",
+  props: ["id"],
   computed: {
-    posts() {
-      return this.$store.state.posts;
+    content() {
+      for (const post of this.$store.state.posts) {
+        if (post.id === this.id) {
+          return post;
+        }
+      }
+      return null;
     },
   },
   methods: {
@@ -63,7 +64,6 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 20px;
-  font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
   /*Header stays above every element*/
@@ -77,7 +77,7 @@ header {
   flex-direction: column;
   gap: 20px;
   /*Gap between posts*/
-  padding-right: 8px;
+  /* padding-right: 8px; */
   /* So the scrollbar isn't too close to the posts*/
 }
 .post {
@@ -101,7 +101,6 @@ header {
 }
 
 .post-date {
-  font-size: 0.8em;
   color: #34495e;
 }
 

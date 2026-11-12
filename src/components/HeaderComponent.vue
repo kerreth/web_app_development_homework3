@@ -9,9 +9,41 @@
 
 <script>
 export default {
-  name: 'HeaderComponent',
+  name: "HeaderComponent",
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+header {
+  background-color: #899b7a;
+  border-radius: 12px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  /*Header stays above every element*/
+}
+
+nav a {
+  padding: 15px; /*Padding for home and addpost buttons*/
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #34495e;
+}
+
+nav a:hover {
+  /*Pseudo class*/
+  background-color: #aab89a;
+  color: #000000;
+  border-radius: 6px;
+}
+
+nav a.router-link-exact-active {
+  color:darkgreen;
+}
+
+</style>
