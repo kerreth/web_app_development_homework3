@@ -56,10 +56,7 @@ export default {
 * {
   font-family: Calibri, sans-serif;
 }
-html,
-body {
-  height: 100%; /*Body takes up the whole height of the viewport*/
-}
+
 p {
   color: #34495e;
 }
@@ -91,6 +88,7 @@ header {
   background-color: #c3e9f8;
   border-radius: 12px;
   padding: 15px;
+  display: flex;
   flex-direction: column;
 }
 .post-header {
@@ -113,6 +111,7 @@ header {
 
 .post-image {
   width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 

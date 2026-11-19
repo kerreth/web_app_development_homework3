@@ -21,7 +21,6 @@ header {
   height: 10%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 10px 0 20px;
   font-weight: bold;
   justify-content: center;
@@ -32,6 +31,7 @@ nav a {
   padding: 15px; /*Padding for home and addpost buttons*/
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 25px;
   color: #34495e;
 }
 
@@ -46,4 +46,10 @@ nav a.router-link-exact-active {
   color:#0099d1;
 }
 
+@media (max-width: 600px) {
+  nav a {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
 </style>

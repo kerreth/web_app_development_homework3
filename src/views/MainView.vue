@@ -40,6 +40,7 @@ export default {
 
 <style scoped>
     .mainview {
+      flex: 1;
       margin-top: 20px;
       display: flex;
       flex-direction: row;
@@ -49,23 +50,27 @@ export default {
 
     .leftbar, .rightbar {
       background-color: #b5d9e7;
-      width: 20%;
+      flex: 1;
       border-radius: 12px;
     }
 
     .postsArea {
-      flex: 1; /*Fills the entire width of the page*/
+      flex: 1 1 1000px; /*Fills the entire width of the page*/
+      max-width: 1000px;
       overflow-y: auto; /*Allows scrolling only in the posts area so the header and bars are always in place*/
       display: flex;
       flex-direction: column;
       gap: 20px; /*Gap between posts*/
       padding-right: 8px; /* So the scrollbar isn't too close to the posts*/
+    
     }
 
     .resetButton {
-      background-color: #265ed8;
+      background-color: #274075;
       color: white;
-      padding: 10px 22px;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
       border: none;
       border-radius: 12px;
       cursor: pointer;
@@ -94,4 +99,27 @@ export default {
     .postsArea::-webkit-scrollbar-thumb:hover {
       background-color: #b5d9e7;
     }
+
+    @media (max-width: 900px) {
+      .leftbar, .rightbar {
+         width: 10%;
+         min-width: 50px;
+    }
+}
+
+
+    @media (max-width: 450px) {
+  .leftbar, .rightbar {
+    display: none;
+  }
+
+  .mainview {
+    gap: 0;
+  }
+
+  .postsArea {
+    padding: 0 10px;
+  }
+}
+  
 </style>

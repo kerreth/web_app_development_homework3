@@ -21,6 +21,9 @@ export default {
   border-radius: 12px;
   margin-top: 10px;
   align-self: stretch;
-  height: 13%;
+  min-height: 80px;
+  height: auto;
+  flex-shrink: 0;
+
 }
 </style>
