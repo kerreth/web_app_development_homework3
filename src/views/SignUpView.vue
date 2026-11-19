@@ -73,8 +73,9 @@ export default {
   },
   methods:{
     signup(){
-        if(this.passwordErrors.length==0){
+        if(this.passwordErrors.length == 0){
             alert('Password is valid');
+            this.$router.push('/');
         }
     }
   }

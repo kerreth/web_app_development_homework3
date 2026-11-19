@@ -1,7 +1,6 @@
 <template>
     <footer class="footer">
         <p>Group F</p>
-        <p>Narva mnt 18, 51009 Tartu, Eesti</p>
         <p>© 2026. All rights reserved.</p>
 
     </footer>
