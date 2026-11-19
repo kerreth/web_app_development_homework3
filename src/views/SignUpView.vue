@@ -1,4 +1,6 @@
 <template>
+  <section class="signupPage">
+  <HeaderComponent/>  
   <section class="login-box">
     <h1 class="welcome">Welcome</h1>
     <p>Please Sign Up</p>
@@ -24,11 +26,17 @@
         <button type="submit">Signup</button>
     </form>
   </section>
+  <FooterComponent />
+  </section>
 </template>
 
 <script>
+import HeaderComponent from '@/components/HeaderComponent.vue'; 
+import FooterComponent from '@/components/Footer.vue'; 
+
 export default {
   name: 'SignUpView',
+  components: { HeaderComponent, FooterComponent },
 
   data(){
     return{
@@ -74,6 +82,12 @@ export default {
 </script>
 
 <style scoped>
+
+.signupPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 form {
     display: flex;

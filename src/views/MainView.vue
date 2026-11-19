@@ -1,4 +1,6 @@
 <template>
+  <section class="mainPage">
+  <HeaderComponent />
   <section class="mainview">
     <aside class="leftbar">
   
@@ -16,14 +18,19 @@
   <section class="resetButtonSection">
     <button class="resetButton" @click="resetLikes()">Reset Likes</button>
   </section>
+  <FooterComponent />
+  </section>
 </template>
+
 <script>
 
 import PostComponent from '@/components/PostComponent.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue'; 
+import FooterComponent from '@/components/Footer.vue'; 
 
 export default {
   name: 'MainView',
-  components: { PostComponent },
+  components: { PostComponent, HeaderComponent, FooterComponent },
   computed: {
     postIds() {
       return this.$store.state.posts.map(post => post.id);
@@ -39,6 +46,13 @@ export default {
 </script>
 
 <style scoped>
+
+    .mainPage {
+      height: 150vh;
+      display: flex;
+      flex-direction: column;
+    }
+
     .mainview {
       flex: 1;
       margin-top: 20px;

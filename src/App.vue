@@ -1,19 +1,11 @@
 <template>
-  <HeaderComponent />
   <main>
     <router-view />
   </main>
-  <FooterComponent />
 </template>
 
 <script>
-import FooterComponent from "@/components/Footer.vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
 
-export default {
-  name: "App",
-  components: { HeaderComponent, FooterComponent },
-};
 </script>
 
 <style>
@@ -33,7 +25,7 @@ p {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 150vh;
+  min-height: 100vh; /*Change to 100% if we dont want the outer scrollbar. 150 vh is just 150% of the viewport height */
   display: flex;
   flex-direction: column;
   background: linear-gradient(
